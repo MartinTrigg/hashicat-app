@@ -200,10 +200,9 @@ resource "null_resource" "configure-cat-app" {
       host     = azurerm_public_ip.catapp-pip.fqdn
     }
   }
-  
+}
 module "backupstorage" {
   source = "app.terraform.io/MartinTriggBupa/azure-backup/azurerm"
   version = "1.0.2"
   resource_group_name = "${var.prefix}-private"
-}
 }
